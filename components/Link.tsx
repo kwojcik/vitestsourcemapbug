@@ -15,6 +15,7 @@ function Link({ page, children }: React.PropsWithChildren<{ page: string }>) {
   const onMouseLeave = () => {
     setStatus(STATUS.NORMAL);
   };
+  console.log(expected.error.here); // <<---------- This is line 18
 
   return (
     <a
