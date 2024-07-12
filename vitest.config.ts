@@ -1,9 +1,8 @@
-/// <reference types="vitest" />
-
 import { defineConfig } from "vite";
 
 export default defineConfig({
   test: {
+    fileParallelism: false,
     setupFiles: ["./vitest.setup.ts"],
     // environment: "jsdom",
     browser: {
