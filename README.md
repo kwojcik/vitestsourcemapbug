@@ -6,12 +6,16 @@ npm run test
 ```
 
 ```
+ FAIL  test/basic.test.tsx > DocumentRepositoryPage > renders a table with rows
 Error: oops
- ❯ test/basic.test.tsx:7:11
-      5| });
-      6|
-      7| test("fails", async () => {
-       |           ^
-      8|   setTimeout(() => {
-      9|     throw new Error("oops");
+
+Failure screenshot:
+  - test/__screenshots__/basic.test.tsx/DocumentRepositoryPage-renders-a-table-with-rows-1.png
+
+ ❯ Bar components/Bar.tsx:2:9
+      1| function Foo() {
+      2|   return <>hi</>;
+       |         ^
+      3| }
+      4| export default function Bar() {
 ```

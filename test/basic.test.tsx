@@ -1,12 +1,9 @@
-import { expect, test } from "vitest";
+import { render } from "@testing-library/react";
+import Bar from "../components/Bar.js";
+import { describe, it } from "vitest";
 
-test("passes", () => {
-  expect(true).toBe(true);
-});
-
-test("fails", async () => {
-  setTimeout(() => {
-    throw new Error("oops");
-  }, 100);
-  await new Promise((r) => setTimeout(r, 1000));
+describe("DocumentRepositoryPage", () => {
+  it("renders a table with rows", () => {
+    render(<Bar />);
+  });
 });
