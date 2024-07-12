@@ -1,4 +1,4 @@
-Repro for vitest issue. Press `r` to re-run the test to cause it to trigger
+Repro for vitest issue, incorrect line number on stack trace
 
 ```
 npm install
@@ -6,15 +6,12 @@ npm run test
 ```
 
 ```
-TypeError: [Function redirect2] is not a spy or a call to a spy!
-
-Failure screenshot:
-  - test/__screenshots__/test1.test.tsx/test-with-broken-spy-returns-redirect-response-if-key-not-included-in-param-validation-schema-1.png
-
- ❯ test/test1.test.tsx:27:49
-     16|     expect(vi.mocked(redirect)).toHaveBeenCalledOnce();
-     17|   });
-     18| });
-       |              ^
-     19|
+Error: oops
+ ❯ test/basic.test.tsx:7:11
+      5| });
+      6|
+      7| test("fails", async () => {
+       |           ^
+      8|   setTimeout(() => {
+      9|     throw new Error("oops");
 ```
