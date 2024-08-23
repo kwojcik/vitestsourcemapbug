@@ -2,15 +2,21 @@
 
 import { defineConfig } from "vite";
 
-export default defineConfig({
+export const CONFIG = {
   test: {
+    fileParallelism: false,
     setupFiles: ["./vitest.setup.ts"],
-    // environment: "jsdom",
     browser: {
       enabled: true,
       name: "chromium",
       provider: "playwright",
       headless: true,
     },
+    coverage: {
+      provider: "istanbul",
+      reporter: ["cobertura", "html", "text"],
+      exclude: ["test/foo*"],
+    },
   },
-});
+};
+export default defineConfig(CONFIG);

@@ -15,12 +15,13 @@
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/react": "^18.2.79",
-    "@vitest/browser": "^1.6.0",
-    "@vitest/ui": "latest",
     "jsdom": "^24.0.0",
     "playwright": "^1.45.0",
     "vite": "latest",
-    "vitest": "latest"
+    "@vitest/browser": "^v2.1.0-beta.6",
+    "@vitest/coverage-istanbul": "^v2.1.0-beta.6",
+    "@vitest/ui": "^v2.1.0-beta.6",
+    "vitest": "^v2.1.0-beta.6"
   },
   "stackblitz": {
     "startCommand": "npm run test:ui"
