@@ -15,7 +15,6 @@ export const CONFIG = {
     coverage: {
       provider: "istanbul",
       reporter: ["cobertura", "html", "text"],
-      exclude: ["test/foo*"],
     },
   },
 };
