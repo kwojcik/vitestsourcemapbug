@@ -2,7 +2,7 @@
 
 import { defineConfig } from "vite";
 
-export const CONFIG = {
+export default defineConfig({
   test: {
     fileParallelism: false,
     setupFiles: ["./vitest.setup.ts"],
@@ -17,5 +17,4 @@ export const CONFIG = {
       reporter: ["cobertura", "html", "text"],
     },
   },
-};
-export default defineConfig(CONFIG);
+});
